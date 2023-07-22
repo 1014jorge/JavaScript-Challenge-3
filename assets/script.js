@@ -1,15 +1,17 @@
 // Assignment code here
+
 var generateBtn = document.querySelector("#generate");
-//console.log(generateBtn)
+//var for different character types.
 var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",];
 var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",];
 var special = ["!", "#", "$", "%", "&", "*", "+", "-", ".", ":", ";", "<", "=", ">", "?", "@", "^", "_", "|", "~",];
 var possible = [];
 
+
+//function for  generating password and how many characters the password will have
+
 function generatePassword() {
-
-
 
   var howManyCharacters = prompt("How many characters would you like your password to have? Choose between 8-128 characters.");
   howManyCharacters = parseInt(howManyCharacters, 10)
@@ -34,7 +36,7 @@ function generatePassword() {
   possible = [];
 
   if (!useLowercase && !useUppercase && !useNumbers && !useSpecial) {
-    alert("Must include at least one of these to generate password.")
+    alert("Must include at least one of these to generate password. Refresh screen to continue.")
   }
   if (useLowercase) {
     possible = possible.concat(lowercase);
