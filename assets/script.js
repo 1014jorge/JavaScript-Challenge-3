@@ -25,6 +25,8 @@ function generatePassword() {
     alert("Password will be " + howManyCharacters + " characters long.");
 
   }
+  //created variables for different characters and prompts to confirm of decline the different characters for the password
+
   var useLowercase = confirm("Click OK to use lower case characters in your password, Cancel if you don't. ");
 
   var useUppercase = confirm("Click OK to use upper case characters in your password, Cancel if you don't. ");
@@ -34,7 +36,7 @@ function generatePassword() {
   var useNumbers = confirm("Click OK to use numbers in your password, Cancel if you don't.");
 
   possible = [];
-
+//added alert in case no characters were elected
   if (!useLowercase && !useUppercase && !useNumbers && !useSpecial) {
     alert("Must include at least one of these to generate password. Refresh screen to continue.")
   }
@@ -57,7 +59,7 @@ function generatePassword() {
   }
 
   var password = "";
-
+//random characters selected for password
   for (let i = 0; i < howManyCharacters; i++) {
     password += possible[Math.floor(Math.random() * possible.length)];
   }
