@@ -10,3 +10,6 @@ Used started code to create a password generator
 # Repository website
 https://github.com/1014jorge/JavaScript-Challenge-3
 
+# Password Generator Website
+
+https://1014jorge.github.io/JavaScript-Challenge-3/
